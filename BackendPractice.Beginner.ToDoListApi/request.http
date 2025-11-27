@@ -1,0 +1,64 @@
+@baseUrl = http://localhost:5001
+
+
+###
+
+
+POST {{baseUrl}}/login
+
+###
+
+POST {{baseUrl}}/user/register
+Content-Type: application/json
+
+{
+  "name": "Moamen",
+  "email": "momenatef530@gmail.com",
+  "password": "P@ssw0rd"
+}
+
+### 
+
+POST {{baseUrl}}/user/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@doe.com",
+  "password": "password"
+}
+###
+
+POST {{baseUrl}}/user/login
+Content-Type: application/json
+
+{
+  "email": "john@doe.com",
+  "password": "password"
+}
+
+
+### 
+POST {{baseUrl}}/todos
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+  "title": "Task 2",
+  "description": "The Description 2"
+}
+###
+
+PUT {{baseUrl}}/todos/2
+Content-Type: application/json
+Authorization: Bearer 
+
+{
+  "title": "Task 22",
+  "description": "task two"
+}
+
+### 
+DELETE {{baseUrl}}/todos/1
+Authorization: Bearer 
+
